@@ -1,0 +1,23 @@
+-Build python flask image with the name “ITI-flask-lab2” from repo https://github.com/meldafrawi/basic-flask-app.git
+
+$mkdir lab1
+$cd
+$git clone https://github.com/meldafrawi/basic-flask-app.git
+$touch dockerfile
+$vi dockerfile
+
+FROM alpine:3.10
+COPY basic-flask-app /app
+WORKDIR /app
+RUN apk add --no-cache python2 py2-pip
+RUN pip2 install --no-cache -r requirements.txt
+ENTRYPOINT ["python"]
+CMD ["routes.py"]
+
+$docker build -t app-flask .
+
+-publish port 127.0.0.1:5000 to port 82 ON THE HOST
+$docker run -d -p 82:5000 app-flask
+
+-Run the image with memory limit 100MB
+$docker run -d -m=100M  app-flask
