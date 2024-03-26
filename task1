@@ -4,7 +4,7 @@ $mkdir lab1
 $cd
 $git clone https://github.com/meldafrawi/basic-flask-app.git
 $touch dockerfile
-$vi dockerfile
+$vi dockerfile 
 
 FROM alpine:3.10
 COPY basic-flask-app /app
