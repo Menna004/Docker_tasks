@@ -1,0 +1,6 @@
+Make github account with your name
+Download and install docker on your machine
+Pull nginx:alpine image on your machine
+Explore “docker run” command and run nginx:alpine image on your machine in the background and specify the name of the container to name-ITI-<NO>
+Run apache container with apache image with memory limit 70 MB and 1 core of cpu
+After creating the containers make sure to get the path of the cgroups created for this container and memory.limit_in_bytes of apache container
